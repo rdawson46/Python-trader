@@ -4,7 +4,7 @@ import alpaca_trade_api as tradeapi
 class Martingale(object):
     def __init__(self):
         self.key = 'PK35MDGAXOIF0NSIZ8CC'
-        self.secret = 'jnfAgOZRKbaAEMe0cdOW8nyjUtwraBBBFBjS19cs'
+        self.secret = ''
         self.alpaca_endpoint = 'https://paper-api.alpaca.markets'
         self.api = tradeapi.REST(self.key, self.secret, self.alpaca_endpoint)
         self.symbol = 'IVV'
@@ -41,5 +41,3 @@ class Martingale(object):
             self.current_order = self.api.submit_order(self.symbol, sell_quantity, 'sell', 'limit', 'day', self.last_price)
 
 
-if __name__ == '__main__':
-    print('hello world')

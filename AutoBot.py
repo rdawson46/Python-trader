@@ -4,7 +4,7 @@ import alpaca_trade_api as tradeapi
 class StockBot(object):
     def __init__(self):
         self.key = 'PK35MDGAXOIF0NSIZ8CC'
-        self.secret = 'jnfAgOZRKbaAEMe0cdOW8nyjUtwraBBBFBjS19cs'
+        self.secret = ''
         self.url = 'https://paper-api.alpaca.markets'
         self.api = tradeapi.REST(self.key, self.secret, self.url)
         self.symbols = ['CROX', 'VOO']
